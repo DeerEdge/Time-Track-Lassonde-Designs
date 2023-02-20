@@ -196,47 +196,31 @@ class Main(object):
         self.intro_label = self.create_QLabel("central_widget", "intro_label", "Signed in as " + first_name + " " + last_name, 200, 10, 600, 50)
         self.dashboard_label = self.create_QLabel("dashboard_tab", "dashboard_label", "Dashboard", 20, 20, 600, 50)
         self.dashboard_title_line = self.create_QFrame("dashboard_tab", "dashboard_title_line", "HLine", 10, 65, 600, 6)
-        dashboard_slideshow = self.create_QLabel("dashboard_tab", "dashboard_slider_label", "filler", 20, 90, 840, 480)
-        dashboard_slideshow.setScaledContents(True)
-        slideshow_title = self.create_QLabel("dashboard_tab", "slideshow_title", "", 20, 580, 840, 20)
-        slideshow_title.setWordWrap(True)
-        slideshow_description = self.create_QLabel("dashboard_tab", "slideshow_description", "", 20, 600, 840, 100)
-        slideshow_description.setWordWrap(True)
-        slideshow_description.setAlignment(QtCore.Qt.AlignTop)
-        self.dashboard_separator_line = self.create_QFrame("dashboard_tab", "dashboard_separator_line", "VLine", 875, 40, 6, 630)
-
-        self.announcements = self.create_QLabel("dashboard_tab", "announcements", "Announcements", 900, 40, 300, 30)
-        self.upcoming_events_objects = self.create_QScrollArea("dashboard_tab", "upcoming_events_QScrollArea",
-                                                               "vertical_layout", 900, 110, 300, 560)
-        self.upcoming_events = self.upcoming_events_objects[0]
-        self.upcoming_events_layout = self.upcoming_events_objects[1]
-        self.upcoming_events_scrollArea = self.upcoming_events_objects[2]
-
-
+        self.announcement1 = QtWidgets.QLabel(self.dashboard_tab)
+        self.announcement1.setGeometry(20, 90, 374, 547)
+        self.announcement1.setScaledContents(True)
+        self.announcement1.setPixmap(QtGui.QPixmap("Application Pictures and Icons/Announcement 3.png"))
+        self.announcement1.show()
+        self.announcement2 = QtWidgets.QLabel(self.dashboard_tab)
+        self.announcement2.setGeometry(420, 90, 374, 547)
+        self.announcement2.setScaledContents(True)
+        self.announcement2.setPixmap(QtGui.QPixmap("Application Pictures and Icons/Announcement 2.png"))
+        self.announcement2.show()
+        self.announcement3 = QtWidgets.QLabel(self.dashboard_tab)
+        self.announcement3.setGeometry(820, 90, 374, 547)
+        self.announcement3.setScaledContents(True)
+        self.announcement3.setPixmap(QtGui.QPixmap("Application Pictures and Icons/Announcement 1.png"))
+        self.announcement3.show()
 
         # Upcoming Events Tab
-        #
-        #
-        #
         self.upcoming_events_label = self.create_QLabel("upcoming_events_tab", "upcoming_events_label", "Upcoming Events", 20, 20, 600, 50)
         self.upcoming_events_title_line = self.create_QFrame("upcoming_events_tab", "upcoming_events_title_line", "HLine", 10, 65, 600, 6)
         self.student_calendar = self.create_QCalendar("upcoming_events_tab", 20, 80, 600, 600)
         self.student_calendar.selectionChanged.connect(self.student_upcoming_events_calendar)
         self.current_day = self.student_calendar.selectedDate().toString()
-        self.day_events_label = self.create_QLabel("upcoming_events_tab", "day_event_label", "  Events on " + self.current_day, 705, 80, 430, 30)
-
-        self.upcoming_events_tab_objects = self.create_QScrollArea("upcoming_events_tab", "upcoming_events_QScrollArea",
-                                                               "vertical_layout", 705, 110, 430, 560)
-        self.upcoming_tab_events = self.upcoming_events_tab_objects[0]
-        self.upcoming_tab_events_layout = self.upcoming_events_tab_objects[1]
-        self.upcoming_tab_events_scrollArea = self.upcoming_events_tab_objects[2]
-
-
+        self.day_events_label = self.create_QLabel("upcoming_events_tab", "day_event_label", "  Events on the selected date:", 685, 75, 430, 30)
 
         # Maps Tab
-        #
-        #
-        #
         self.maps_label = self.create_QLabel("maps_tab", "maps_label", "Maps", 20, 20, 600, 50)
         self.maps_line = self.create_QFrame("maps_tab", "maps_line", "HLine", 10, 65, 600, 6)
         self.map_container = QtWidgets.QGroupBox(self.maps_tab)
@@ -345,7 +329,6 @@ class Main(object):
     def student_upcoming_events_calendar(self):
         selected_date = self.upcoming_events_tab.sender().selectedDate().toString()
         new_date = selected_date.split()
-        self.check_events_on_day()
 
     def return_to_login_screen(self):
         global kill_thread_boolean
