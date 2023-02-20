@@ -1,0 +1,237 @@
+/* STATUS BAR */
+QStatusBar#status_bar {
+    color: #F6F6F6;
+}
+
+/* LOGIN SCREEN */
+QLabel#login_titles {
+    color: #FFFFFF;
+    font: 18px
+}
+
+QLabel#login_screen_labels {
+    color: #FFFFFF;
+}
+
+QPushButton#login_screen_forgot_password{
+    border: none;
+    color: #FFFFFF;
+    background: transparent;
+}
+QPushButton#login_screen_forgot_password:hover {
+    color: cyan;
+}
+QPushButton#login_screen_forgot_password:pressed {
+    color: blue;
+}
+
+QLabel#incorrect_login{
+    color: red;
+}
+
+QPushButton#student_login_button {
+    border: red;
+    color: #FFFFFF;
+    background: red;
+}
+QPushButton#student_login_button:hover {
+    background: #FF2E2E;
+}
+QPushButton#student_login_button:pressed {
+    color: red;
+    background: #FFFFFF;
+}
+
+QPushButton#administrator_login_button {
+    border: red;
+    color: #FFFFFF;
+    background: red;
+}
+QPushButton#administrator_login_button:hover {
+    background: #FF2E2E;
+}
+QPushButton#administrator_login_button:pressed {
+    color: red;
+    background: #FFFFFF;
+}
+
+QFrame#login_screen_elements {
+    color: #FFFFFF;
+}
+
+/* HOME PAGE */
+QLabel#intro_label {
+    color: #FFFFFF;
+    font: bold 32px;
+}
+
+QWidget#central_widget {
+    background-color: rgb(41, 89, 143);
+}
+
+QWidget#tab_widget {
+    background-color: #e8e8eb;
+}
+
+/* Dashboard */
+QLabel#dashboard_label {
+    font: bold 30px;
+}
+
+QFrame#dashboard_title_line {
+    background-color: black;
+}
+
+QLabel#dashboard_announcement_label {
+    font: 20px;
+    color: black;
+    background-color: rgb(161, 225, 237);
+    border: 1px solid darkgrey;
+}
+
+QLabel#dashboard_upcoming_events_label {
+    font: 20px;
+    color: black;
+    background-color: rgb(161, 225, 237);
+    border: 1px solid darkgrey;
+}
+
+QLabel#dashboard_important_events_label {
+    font: 20px;
+    color: black;
+    background-color: rgb(161, 225, 237);
+    border: 1px solid darkgrey;
+}
+
+
+/* Upcoming Events */
+
+QLabel#upcoming_events_label {
+    font: bold 30px;
+}
+
+QFrame#upcoming_events_title_line {
+    background-color: black;
+}
+
+QLabel#day_events_label {
+    font: 20px;
+    color: black;
+    background-color: rgb(161, 225, 237);
+    border: 1px solid darkgrey;
+}
+
+QLabel#upcoming_events_page_label {
+    font: 20px;
+    color: black;
+    background-color: rgb(161, 225, 237);
+    border: 1px solid darkgrey;
+}
+QLabel#announcements {
+    font: 20px;
+    color: black;
+    background-color: rgb(161, 225, 237);
+    border: 1px solid darkgrey;
+}
+
+/* Points */
+
+QLabel#points_label {
+    font: bold 30px;
+}
+
+QFrame#points_title_line {
+    background-color: black;
+}
+
+QLabel#personal_points_label {
+    font: 20px;
+    color: black;
+    background-color: rgb(161, 225, 237);
+    border: 1px solid darkgrey;
+}
+
+QLabel#points_leaderboard_label {
+    font: 20px;
+    color: black;
+    background-color: rgb(161, 225, 237);
+    border: 1px solid darkgrey;
+}
+
+/* Rewards */
+
+QLabel#rewards_label {
+    font: bold 30px;
+}
+QLabel#rewards_my_points_label {
+    font: bold 20px;
+}
+QFrame#rewards_title_line {
+    background-color:black;
+}
+
+/* Student Profile */
+
+QLabel#student_profile_label {
+    font: bold 30px;
+}
+QLabel#student_purchases_label {
+    font: bold 15px;
+}
+
+QFrame#student_profile_title_line {
+    background-color: black;
+}
+
+QLabel#student_profile_data_label {
+    font: 20px;
+    color: black;
+    background-color: rgb(161, 225, 237);
+    border: 1px solid darkgrey;
+    spacing: double;
+}
+
+ /* Administrator login */
+
+ QLabel#admin_dashboard_label {
+    font: bold 30px;
+ }
+
+ QFrame#admin_dashboard_line {
+    background-color: black;
+ }
+
+ QLabel#admin_events_label {
+    font: bold 30px;
+ }
+
+ QFrame#admin_events_line {
+    background-color: black;
+ }
+
+ QLabel#maps_label {
+    font: bold 30px;
+ }
+
+ QFrame#maps_line{
+    background-color: black;
+ }
+
+ QLabel#admin_statistics_label {
+    font: bold 30px;
+ }
+
+ QFrame#admin_statistics_line {
+    background-color: black;
+ }
+
+ QLabel#admin_student_view_label {
+    font: bold 30px;
+ }
+
+ QFrame#admin_student_view_line {
+    background-color: black;
+ }
+
+
+
