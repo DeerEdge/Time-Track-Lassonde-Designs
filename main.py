@@ -3,8 +3,6 @@ import threading
 import sys
 import turtle
 import tables
-import colorama
-from colorama import Fore
 from PyQt5.QtCore import Qt, pyqtSignal, QDate, QRunnable, pyqtSlot, QThreadPool
 from PyQt5.QtGui import QIcon, QPixmap, QTextCursor
 from PyQt5.QtWidgets import *
@@ -275,9 +273,48 @@ class Main(object):
         # Student Profile Tab
         self.student_profile_label = self.create_QLabel("student_profile_tab", "student_profile_label", "My Profile", 20, 20, 600, 50)
         self.student_profile_title_line = self.create_QFrame("student_profile_tab", "student_profile_title_line", "HLine", 10, 65, 600, 6)
-        self.student_profile_data = self.create_QTextEdit("student_profile_tab", "student_profile_data", True, 900, 50, 300, 300)
-        self.student_profile_data_label = self.create_QLabel("student_profile_tab", "student_profile_data_label", "  User Data", 900, 20, 300, 30)
+        self.student_profile_data = self.create_QTextEdit("student_profile_tab", "student_profile_data", True, 700, 110, 400, 300)
+        self.student_profile_data.append("\n     Name: Dheeraj Vislawath\n\n     Grade: 11\n\n     Points: 200\n\n     Total prizes bought: 4\n\n     Date of Birth: 09/05/2005\n\n     Gender: Male")
+        self.student_profile_data_label = self.create_QLabel("student_profile_tab", "student_profile_data_label", "  User Data", 700, 80, 400, 30)
         self.student_purchases_label = self.create_QLabel("student_profile_tab", "student_purchases_label", "Past Purchases ", 20, 80, 300, 50)
+
+        self.student_purchases_image1 = QtWidgets.QLabel(self.student_profile_tab)
+        self.student_purchases_image1.setFixedSize(200, 200)
+        self.student_purchases_image1.move(20, 130)
+        self.student_purchases_image1.setPixmap(QtGui.QPixmap("Rewards Pictures/0 - Fun-Sized Candy Bar.png"))
+        self.student_purchases_image1.setScaledContents(True)
+        self.student_purchases_image1.show()
+
+        self.student_purchases_image1_label = self.create_QLabel("student_profile_tab", "student_purchases_label", "Fun-sized candy bar", 38, 325, 200, 50)
+
+        self.student_purchases_image2 = QtWidgets.QLabel(self.student_profile_tab)
+        self.student_purchases_image2.setFixedSize(200, 200)
+        self.student_purchases_image2.move(350, 130)
+        self.student_purchases_image2.setPixmap(QtGui.QPixmap("Rewards Pictures/6 - Hillcrest Hoodie.png"))
+        self.student_purchases_image2.setScaledContents(True)
+        self.student_purchases_image2.show()
+
+        self.student_purchases_image2_label = self.create_QLabel("student_profile_tab", "student_purchases_label", "Hillcrest Hoodie", 390, 325, 200, 50)
+
+        self.student_purchases_image3 = QtWidgets.QLabel(self.student_profile_tab)
+        self.student_purchases_image3.setFixedSize(200, 200)
+        self.student_purchases_image3.move(20, 430)
+        self.student_purchases_image3.setPixmap(QtGui.QPixmap("Rewards Pictures/7 - Hillcrest Blanket.png"))
+        self.student_purchases_image3.setScaledContents(True)
+        self.student_purchases_image3.show()
+
+        self.student_purchases_image3_label = self.create_QLabel("student_profile_tab", "student_purchases_label","Hillcrest Blanket", 55, 620, 200, 50)
+
+        self.student_purchases_image4 = QtWidgets.QLabel(self.student_profile_tab)
+        self.student_purchases_image4.setFixedSize(200, 200)
+        self.student_purchases_image4.move(350, 430)
+        self.student_purchases_image4.setPixmap(QtGui.QPixmap("Rewards Pictures/2 - Chips.png"))
+        self.student_purchases_image4.setScaledContents(True)
+        self.student_purchases_image4.show()
+
+        self.student_purchases_image3_label = self.create_QLabel("student_profile_tab", "student_purchases_label","Chips", 420, 620, 200, 50)
+
+
 
         self.tab_widget.show()
 
